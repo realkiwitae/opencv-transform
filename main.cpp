@@ -66,7 +66,7 @@ Mat rotate(const Mat array, double angle_in_degrees)
 
 Mat rotate_and_translate(const Mat array, double angle_in_degrees , int cx , int cy)
 {
-    // rotate image with angle . Center of the rotation is topleft corner.
+    // transform T'*R*T image
 
     int h = array.rows;
     int w = array.cols;
@@ -93,7 +93,7 @@ Mat rotate_and_translate(const Mat array, double angle_in_degrees , int cx , int
 
 Mat rotate_and_translate2(const Mat array, double angle_in_degrees , int cx , int cy)
 {
-    // rotate image with angle . Center of the rotation is topleft corner.
+    // transform T'*R*T image + interpolation 
 
     int h = array.rows;
     int w = array.cols;
